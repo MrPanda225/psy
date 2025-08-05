@@ -79,7 +79,7 @@ export default class Project extends Component {
           <div className="project-details">
             <h3 className="project-role">Portfolio Personnel</h3>
             <p className="description">
-              - Création d’un site portfolio avec React, Tailwind CSS <br />
+              - Création d’un site portfolio avec React, Tailwind CSS et déploiement sur GitHub Page<br />
               - Intégration de sections dynamiques pour les compétences, projets et contact.<br />
               - Optimisation pour une expérience utilisateur responsive sur mobile et desktop.
             </p>
