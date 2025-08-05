@@ -2,44 +2,44 @@ import React, { Component } from 'react';
 import './style/Skill.css';
 
 // Import de chaque image afin que Vite gère le bundling et le base path
-import jsImg from '../../assets/skill/js.png';
-import tsImg from '../../assets/skill/ts.png';
-import pythonImg from '../../assets/skill/python.png';
-import javaImg from '../../assets/skill/java.png';
-import cppImg from '../../assets/skill/c++.png';
-import kotlinImg from '../../assets/skill/kotlin.png';
-import htmlImg from '../../assets/skill/html.png';
-import cssImg from '../../assets/skill/css.png';
-import phpImg from '../../assets/skill/php.png';
+import jsImg from '../assets/skill/js.png';
+import tsImg from '../assets/skill/ts.png';
+import pythonImg from '../assets/skill/python.png';
+import javaImg from '../assets/skill/java.png';
+import cppImg from '../assets/skill/c++.png';
+import kotlinImg from '../assets/skill/kotlin.png';
+import htmlImg from '../assets/skill/html.png';
+import cssImg from '../assets/skill/css.png';
+import phpImg from '../assets/skill/php.png';
 
-import reactImg from '../../assets/skill/react.png';
-import angularImg from '../../assets/skill/angular.png';
-import wordpressImg from '../../assets/skill/wordpress.png';
+import reactImg from '../assets/skill/react.png';
+import angularImg from '../assets/skill/angular.png';
+import wordpressImg from '../assets/skill/wordpress.png';
 
-import expressImg from '../../assets/skill/express.png';
-import nodeImg from '../../assets/skill/node.png';
-import djangoImg from '../../assets/skill/django.png';
-import springImg from '../../assets/skill/spring.png';
+import expressImg from '../assets/skill/express.png';
+import nodeImg from '../assets/skill/node.png';
+import djangoImg from '../assets/skill/django.png';
+import springImg from '../assets/skill/spring.png';
 
-import mysqlImg from '../../assets/skill/mysql.png';
-import mongoImg from '../../assets/skill/mongo.png';
-import postgreImg from '../../assets/skill/postgre.png';
+import mysqlImg from '../assets/skill/mysql.png';
+import mongoImg from '../assets/skill/mongo.png';
+import postgreImg from '../assets/skill/postgre.png';
 
-import gitImg from '../../assets/skill/git.png';
-import dockerImg from '../../assets/skill/docker.png';
+import gitImg from '../assets/skill/git.png';
+import dockerImg from '../assets/skill/docker.png';
 
-import figmaImg from '../../assets/skill/figma.png';
-import umlImg from '../../assets/skill/uml.png';
-import postmaImg from '../../assets/skill/postma.png';
+import figmaImg from '../assets/skill/figma.png';
+import umlImg from '../assets/skill/uml.png';
+import postmaImg from '../assets/skill/postma.png';
 
-import vscodeImg from '../../assets/skill/vscode.png';
-import intellijImg from '../../assets/skill/intellij.png';
-import androidStudioImg from '../../assets/skill/androidStudio.png';
+import vscodeImg from '../assets/skill/vscode.png';
+import intellijImg from '../assets/skill/intellij.png';
+import androidStudioImg from '../assets/skill/androidStudio.png';
 
-import chatgptImg from '../../assets/skill/chatgpt-seeklogo.png';
-import grokImg from '../../assets/skill/grok.png';
-import copilotImg from '../../assets/skill/github-copilot-seeklogo.png';
-import claudeImg from '../../assets/skill/claude-seeklogo.png';
+import chatgptImg from '../assets/skill/chatgpt-seeklogo.png';
+import grokImg from '../assets/skill/grok.png';
+import copilotImg from '../assets/skill/github-copilot-seeklogo.png';
+import claudeImg from '../assets/skill/claude-seeklogo.png';
 
 export default class Skill extends Component {
   render(): React.ReactNode {
