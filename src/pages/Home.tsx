@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style/Home.css';
+import logo from '../assets/personal.jpg';
 
 export default class Home extends Component {
   state = {
@@ -20,7 +21,7 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <div className="profile-section">
-          <img src="/src/assets/personal.jpg" alt="Sahiré Yapi" className="profile-image" />
+          <img src={logo}  alt="Sahiré Yapi" className="profile-image" />
           <div className="text-content">
             <h1>Sahiré YAPI</h1>
             <p className="role">
