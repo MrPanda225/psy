@@ -32,6 +32,12 @@ export default class Home extends Component {
         <div className="services-section">
           <h2>Contact</h2>
           <p>Contactez-moi pour collaborer sur des projets innovants ou discuter de nouvelles opportunités dans le domaine de l'IT !</p>
+          {showContact && (
+            <div className="contact-info">
+              {showContact === 'tel' && <p className="contact-text">+33 6 12 34 56 78</p>}
+              {showContact === 'email' && <p className="contact-text">sahire-guy-michel.yapi@etudiant.univ-rennes.fr</p>}
+            </div>
+          )}
           <div className="icons">
             <a
               href="#"
@@ -56,12 +62,6 @@ export default class Home extends Component {
               GitLab
             </a>
           </div>
-          {showContact && (
-            <div className="contact-info">
-              {showContact === 'tel' && <p className="contact-text">+33 6 12 34 56 78</p>}
-              {showContact === 'email' && <p className="contact-text">sahire-guy-michel.yapi@etudiant.univ-rennes.fr</p>}
-            </div>
-          )}
         </div>
       </div>
     );
