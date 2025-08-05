@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import  { Component } from 'react';
 import './style/Header.css'; // Assurez-vous d'avoir un fichier CSS associé
 
-export default class Header extends Component {
-  state = {
+interface HeaderState {
+  isMenuOpen: boolean;
+}
+export default class Header extends Component<object, HeaderState> {
+  state: HeaderState = {
     isMenuOpen: false,
   };
 

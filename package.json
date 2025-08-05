@@ -31,5 +31,6 @@
   },
   "homepage": "https://MrPanda225.github.io/psy",
   "predeploy": "npm run build",
-  "deploy":   "gh-pages -d build"
+  "deploy": "gh-pages -d dist"
+
 }
