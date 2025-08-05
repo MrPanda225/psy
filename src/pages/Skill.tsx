@@ -1,55 +1,95 @@
 import React, { Component } from 'react';
 import './style/Skill.css';
 
+// Import de chaque image afin que Vite gère le bundling et le base path
+import jsImg from '../../assets/skill/js.png';
+import tsImg from '../../assets/skill/ts.png';
+import pythonImg from '../../assets/skill/python.png';
+import javaImg from '../../assets/skill/java.png';
+import cppImg from '../../assets/skill/c++.png';
+import kotlinImg from '../../assets/skill/kotlin.png';
+import htmlImg from '../../assets/skill/html.png';
+import cssImg from '../../assets/skill/css.png';
+import phpImg from '../../assets/skill/php.png';
+
+import reactImg from '../../assets/skill/react.png';
+import angularImg from '../../assets/skill/angular.png';
+import wordpressImg from '../../assets/skill/wordpress.png';
+
+import expressImg from '../../assets/skill/express.png';
+import nodeImg from '../../assets/skill/node.png';
+import djangoImg from '../../assets/skill/django.png';
+import springImg from '../../assets/skill/spring.png';
+
+import mysqlImg from '../../assets/skill/mysql.png';
+import mongoImg from '../../assets/skill/mongo.png';
+import postgreImg from '../../assets/skill/postgre.png';
+
+import gitImg from '../../assets/skill/git.png';
+import dockerImg from '../../assets/skill/docker.png';
+
+import figmaImg from '../../assets/skill/figma.png';
+import umlImg from '../../assets/skill/uml.png';
+import postmaImg from '../../assets/skill/postma.png';
+
+import vscodeImg from '../../assets/skill/vscode.png';
+import intellijImg from '../../assets/skill/intellij.png';
+import androidStudioImg from '../../assets/skill/androidStudio.png';
+
+import chatgptImg from '../../assets/skill/chatgpt-seeklogo.png';
+import grokImg from '../../assets/skill/grok.png';
+import copilotImg from '../../assets/skill/github-copilot-seeklogo.png';
+import claudeImg from '../../assets/skill/claude-seeklogo.png';
+
 export default class Skill extends Component {
   render(): React.ReactNode {
     const skillCategories = {
       Languages: [
-        { name: 'JavaScript', image: '../assets/skill/js.png' },
-        { name: 'TypeScript', image: '../assets/skill/ts.png' },
-        { name: 'Python', image: '../assets/skill/python.png' },
-        { name: 'Java', image: '../assets/skill/java.png' },
-        { name: 'C++', image: '../assets/skill/c++.png' },
-        { name: 'Kotlin', image: '../assets/skill/kotlin.png' },
-        { name: 'HTML5', image: '../assets/skill/html.png' },
-        { name: 'CSS', image: '../assets/skill/css.png' },
-        { name: 'PHP', image: '../assets/skill/php.png' },
+        { name: 'JavaScript', image: jsImg },
+        { name: 'TypeScript', image: tsImg },
+        { name: 'Python', image: pythonImg },
+        { name: 'Java', image: javaImg },
+        { name: 'C++', image: cppImg },
+        { name: 'Kotlin', image: kotlinImg },
+        { name: 'HTML5', image: htmlImg },
+        { name: 'CSS', image: cssImg },
+        { name: 'PHP', image: phpImg },
       ],
       "Frameworks Frontend": [
-        { name: 'React', image: '../assets/skill/react.png' },
-        { name: 'Angular', image: '../assets/skill/angular.png' },
-        { name: 'WordPress', image: '../assets/skill/wordpress.png' },
+        { name: 'React', image: reactImg },
+        { name: 'Angular', image: angularImg },
+        { name: 'WordPress', image: wordpressImg },
       ],
       "Frameworks Backend": [
-        { name: 'Express.js', image: '../assets/skill/express.png' },
-        { name: 'Node.js', image: '../assets/skill/node.png' },
-        { name: 'Django', image: '../assets/skill/django.png' },
-        { name: 'Spring Boot', image: '../assets/skill/spring.png' },
+        { name: 'Express.js', image: expressImg },
+        { name: 'Node.js', image: nodeImg },
+        { name: 'Django', image: djangoImg },
+        { name: 'Spring Boot', image: springImg },
       ],
       Database: [
-        { name: 'MySQL', image: '../assets/skill/mysql.png' },
-        { name: 'MongoDB', image: '../assets/skill/mongo.png' },
-        { name: 'PostgreSQL', image: '../assets/skill/postgre.png' },
+        { name: 'MySQL', image: mysqlImg },
+        { name: 'MongoDB', image: mongoImg },
+        { name: 'PostgreSQL', image: postgreImg },
       ],
       Tools: [
-        { name: 'Git', image: '../assets/skill/git.png' },
-        { name: 'Docker', image: '../assets/skill/docker.png' },
+        { name: 'Git', image: gitImg },
+        { name: 'Docker', image: dockerImg },
       ],
       "Modeling & Design": [
-        { name: 'Figma', image: '../assets/skill/figma.png' },
-        {name: "UML", image: '../assets/skill/uml.png' },
-        { name: 'API Design', image: '../assets/skill/postma.png' },
+        { name: 'Figma', image: figmaImg },
+        { name: 'UML', image: umlImg },
+        { name: 'API Design', image: postmaImg },
       ],
       "IDEs & Editors": [
-        { name: 'Visual Studio Code', image: '../assets/skill/vscode.png' },
-        { name: 'IntelliJ IDEA', image: '../assets/skill/intellij.png' },
-        { name: "Android Studio", image: '../assets/skill/androidStudio.png' },
+        { name: 'Visual Studio Code', image: vscodeImg },
+        { name: 'IntelliJ IDEA', image: intellijImg },
+        { name: 'Android Studio', image: androidStudioImg },
       ],
       'IA Tools': [
-        { name: 'ChatGPT', image: '../assets/skill/chatgpt-seeklogo.png' },
-        { name: 'Grok', image: '../assets/skill/grok.png' },
-        { name: 'Copilot', image: '../assets/skill/github-copilot-seeklogo.png' },
-        { name: 'Claude', image: '../assets/skill/claude-seeklogo.png' },
+        { name: 'ChatGPT', image: chatgptImg },
+        { name: 'Grok', image: grokImg },
+        { name: 'Copilot', image: copilotImg },
+        { name: 'Claude', image: claudeImg },
       ],
     };
 
@@ -62,7 +102,12 @@ export default class Skill extends Component {
             <div className="skill-cards">
               {skills.map((skill) => (
                 <div className="skill-card" key={skill.name}>
-                  <img src={skill.image} alt={skill.name} className="skill-icon" />
+                  <img
+                    src={skill.image}
+                    alt={skill.name}
+                    className="skill-icon"
+                    loading="lazy"
+                  />
                   <span className="skill-name">{skill.name}</span>
                 </div>
               ))}
