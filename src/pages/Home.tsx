@@ -21,11 +21,11 @@ export default class Home extends Component {
     return (
       <div className="home-container">
         <div className="profile-section">
-          <img src={logo}  alt="Sahiré Yapi" className="profile-image" />
+          <img src={logo} alt="Sahiré Yapi" className="profile-image" />
           <div className="text-content">
             <h1>Sahiré YAPI</h1>
             <p className="role">
-              Etudiant en Master MIAGE, je suis curieux, avec un esprit d'équipe et organisé. Passionné par le développement et les nouvelles technologies, je suis à la recherche d'une alternance dans le domaine de l'IT
+              Etudiant en Master MIAGE, je suis curieux, avec un esprit d'équipe et organisé. Passionné par le développement et les nouvelles technologies, je suis à la recherche d'une alternance dans le domaine de l'IT.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default class Home extends Component {
           )}
           <div className="icons">
             <a
-              href="#"
+              href="tel:+33761991659"
               className="icon"
               onMouseEnter={() => this.handleMouseEnter('tel')}
               onMouseLeave={this.handleMouseLeave}
@@ -48,7 +48,7 @@ export default class Home extends Component {
               Tel
             </a>
             <a
-              href="#"
+              href="mailto:sahire-guy-michel.yapi@etudiant.univ-rennes.fr"
               className="icon"
               onMouseEnter={() => this.handleMouseEnter('email')}
               onMouseLeave={this.handleMouseLeave}
