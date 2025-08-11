@@ -158,3 +158,143 @@
     font-size: 1.2rem;
   }
 }
+
+/* --------- Apparition globale --------- */
+.animate-page {
+  animation: pageFade .6s ease-out both;
+}
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --------- Reveal progressif (titre/texte/section) --------- */
+.reveal-up { opacity: 0; transform: translateY(10px); animation: revealUp .7s ease-out forwards; }
+.delay-1 { animation-delay: .12s; }
+.delay-2 { animation-delay: .24s; }
+.delay-3 { animation-delay: .36s; }
+
+@keyframes revealUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------- Avatar: anneau “pulse” + léger flottement --------- */
+.avatar {
+  position: relative;
+  display: inline-block;
+  isolation: isolate; /* pour le ::after */
+}
+.avatar::after {
+  content: "";
+  position: absolute;
+  inset: -10px;           /* espace autour du cercle */
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 60%);
+  filter: blur(6px);
+  z-index: -1;
+  opacity: .0;
+  animation: halo 2.2s ease-in-out .3s forwards;
+}
+@keyframes halo {
+  0%   { opacity: 0; transform: scale(.92); }
+  100% { opacity: .6; transform: scale(1); }
+}
+
+/* flottement très léger de la photo (subtil) */
+.profile-image { animation: float 6s ease-in-out infinite; }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-4px); }
+}
+
+/* tilt au survol (mobile-safe) */
+.tilt-on-hover {
+  transition: transform .25s ease;
+  will-change: transform;
+}
+.tilt-on-hover:hover {
+  transform: rotate(-1.2deg) scale(1.01);
+}
+
+/* --------- Boutons: lift + glow --------- */
+.icon.lift {
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+.icon.lift:hover {
+  transform: translateY(-3px);
+  background-color: #3a3a3a;
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+}
+
+/* --------- Contact: slide/fade quand visible --------- */
+.contact-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .35s ease, margin-top .35s ease;
+  margin-top: 0;
+}
+.contact-info.show {
+  max-height: 80px;     /* assez pour 1 ligne */
+  opacity: 1;
+  margin-top: .25rem;
+}
+
+/* --------- Respecte l’accessibilité (réduction mouvements) --------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+
+/* Le conteneur principal doit être relatif pour positionner les formes */
+.home-container { position: relative; overflow: hidden; }
+
+/* zone d’insertion (z-index très bas pour ne pas gêner) */
+.floating-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* base des formes */
+.shape {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  opacity: .9;
+  border-radius: 4px;               /* carré par défaut */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.15));
+  animation: drift var(--dur) ease-in-out var(--delay) infinite alternate;
+  will-change: transform;
+}
+
+/* variantes */
+.shape.circle  { border-radius: 50%; }
+.shape.square  { border-radius: 4px; }
+.shape.diamond { transform: rotate(45deg); border-radius: 2px; }
+
+/* animation douce (translation + petite rotation) */
+@keyframes drift {
+  0%   { transform: translate(0,0) rotate(0); }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); }
+}
+
+/* Optionnel : souffle léger pour quelques formes (glow subtil) */
+.shape.circle { box-shadow: 0 0 0 0 rgba(255,255,255,.0); }
+.shape.circle { animation-name: drift, glow; animation-duration: var(--dur), 2.8s; }
+@keyframes glow {
+  0%,100% { box-shadow: 0 0 10px 0 rgba(255,255,255,.0); }
+  50%     { box-shadow: 0 0 14px 2px rgba(255,255,255,.12); }
+}
+
+/* réduire sur mobile (ou masquer si tu veux) */
+@media (max-width: 768px) {
+  .shape { opacity: .65; }
+}
+
+/* accessibilité : utilisateurs sensibles aux animations */
+@media (prefers-reduced-motion: reduce) {
+  .shape { animation: none !important; }
+}
