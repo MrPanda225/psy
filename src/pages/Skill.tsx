@@ -22,6 +22,8 @@ import nodeImg from "../assets/skill/node.png";
 import djangoImg from "../assets/skill/django.png";
 import springImg from "../assets/skill/spring.png";
 
+import reactNativeImg from "../assets/skill/reactNative.png"
+
 import mysqlImg from "../assets/skill/mysql.png";
 import mongoImg from "../assets/skill/mongo.png";
 import postgreImg from "../assets/skill/postgre.png";
@@ -60,6 +62,10 @@ export default class Skill extends Component {
         { name: "React", image: reactImg },
         { name: "Angular", image: angularImg },
         { name: "WordPress", image: wordpressImg },
+      ],
+      "Frameworks Mobile App": [
+        { name: "React Native", image: reactNativeImg },
+        { name: "Android / Kotlin", image: kotlinImg },
       ],
       "Frameworks Backend": [
         { name: "Express.js", image: expressImg },

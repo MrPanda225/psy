@@ -49,12 +49,12 @@ export default function FloatingShapes() {
           ...(s.bottom && { bottom: s.bottom }),
           ...(s.left && { left: s.left }),
           ...(s.right && { right: s.right }),
-          ["--size" as any]: S(s.size),
-          ["--dur" as any]: D(s.dur),
-          ["--dx" as any]: S(s.dx),
-          ["--dy" as any]: S(s.dy),
-          ["--rot" as any]: `${s.rot}deg`,
-          ["--delay" as any]: `${s.delay}s`,
+          ["--size" as never]: S(s.size),
+          ["--dur" as never]: D(s.dur),
+          ["--dx" as never]: S(s.dx),
+          ["--dy" as never]: S(s.dy),
+          ["--rot" as never]: `${s.rot}deg`,
+          ["--delay" as never]: `${s.delay}s`,
           backgroundColor: s.color,
         };
 
