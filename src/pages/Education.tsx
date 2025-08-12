@@ -12,10 +12,7 @@ const items: Edu[] = [
     link: { href: "https://www.univ-rennes.fr", label: "Site de l'université" },
     description: (
       <>
-        L’Université de Rennes est un établissement public expérimental,
-        au cœur de l’écosystème breton. Ambition : répondre aux grands défis
-        sociétaux (environnement, santé globale, numérique) via la formation
-        et la recherche.
+        L’Université de Rennes est un établissement public expérimental. Ouverte sur l’Europe et le monde, au cœur de la Région Bretagne et en lien avec Rennes Métropole et son écosystème, elle est bâtie sur une histoire commune et les atouts de ses membres fondateurs. Elle poursuit une ambition : relever les grands défis sociétaux d’un monde en transition en particulier dans les domaines de l’environnement, de la santé globale et du numérique.
       </>
     ),
   },
@@ -28,8 +25,9 @@ const items: Edu[] = [
     link: { href: "https://univ-fhb.edu.ci", label: "Site de l'université" },
     description: (
       <>
-        Formation alliant informatique de gestion et sciences des organisations.
-        Valeurs phares : excellence, humilité, solidarité et ouverture au monde.
+        L’Université Félix-Houphouët-Boigny est une université ivoirienne située à Abidjan, dans le quartier de Cocody. 
+        Elle se distingue non seulement par son importance académique, mais aussi par les valeurs essentielles qui la guident.
+        Celles-ci s’articulent autour d’un certain nombre de principes fondamentaux, parmi lesquels : le savoir, la rigueur, l’excellence, l’humilité, la solidarité et l’ouverture au monde.
       </>
     ),
   },
