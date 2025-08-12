@@ -9,7 +9,7 @@ const items: Edu[] = [
     university: "Université de Rennes",
     status: "En cours",
     location: "Rennes, France",
-    link: { href: "https://www.univ-rennes.fr", label: "Site de l'université" },
+    link: { href: "https://formations.univ-rennes.fr/mention/master-mention-methodes-informatiques-appliquees-la-gestion-des-entreprises-miage", label: "Site de l'université" },
     description: (
       <>
         L’Université de Rennes est un établissement public expérimental. Ouverte sur l’Europe et le monde, au cœur de la Région Bretagne et en lien avec Rennes Métropole et son écosystème, elle est bâtie sur une histoire commune et les atouts de ses membres fondateurs. Elle poursuit une ambition : relever les grands défis sociétaux d’un monde en transition en particulier dans les domaines de l’environnement, de la santé globale et du numérique.
