@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style/Home.css';
 import logo from '../assets/personal.jpg';
 import FloatingShapes from '../components/FloatingShapes';
+import cvPdf from "../assets/CV_Sahire_YAPI.pdf";
 
 export default class Home extends Component {
   state = {
@@ -34,8 +35,7 @@ export default class Home extends Component {
             </p>
             
             {/* Bouton télécharger CV */}
-            <a href="/assets/CV-IA.pdf" 
-               download="CV_Sahire_YAPI.pdf" 
+            <a href={cvPdf} download="CV_Sahire_YAPI.pdf"
                className="cv-download-btn reveal-up delay-3">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
