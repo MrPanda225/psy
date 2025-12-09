@@ -298,3 +298,80 @@
 @media (prefers-reduced-motion: reduce) {
   .shape { animation: none !important; }
 }
+
+
+/* --------- Bouton télécharger CV --------- */
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.8rem;
+  background: linear-gradient(135deg, #1e90ff 0%, #0066cc 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cv-download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cv-download-btn:hover::before {
+  left: 100%;
+}
+
+.cv-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.45);
+  background: linear-gradient(135deg, #2a9eff 0%, #0077ee 100%);
+}
+
+.cv-download-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.35);
+}
+
+.cv-download-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.cv-download-btn:hover svg {
+  transform: translateY(2px);
+  animation: bounce-download 0.6s ease-in-out;
+}
+
+@keyframes bounce-download {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-download-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .cv-download-btn::before,
+  .cv-download-btn svg {
+    animation: none !important;
+    transition: none !important;
+  }
+}

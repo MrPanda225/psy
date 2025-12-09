@@ -3,11 +3,27 @@ import "./style/Education.css";
 import { AcademicItem, type Edu } from "../components/AcademicItem"; // adapte le chemin
 
 const items: Edu[] = [
+   {
+    years: "2025–2026",
+    degree: "Master 2 MIAGE - Data & Business Intelligence",
+    university: "Université de Rennes",
+    status: "En cours",
+    location: "Rennes, France",
+    link: { 
+      href: "https://formations.univ-rennes.fr/mention/master-mention-methodes-informatiques-appliquees-la-gestion-des-entreprises-miage", 
+      label: "Site de l'université" 
+    },
+    description: (
+      <>
+        Le Master 2 MIAGE parcours Data & Business Intelligence forme des experts capables d'exploiter les données massives pour la prise de décision stratégique en entreprise. Cette formation combine l'informatique décisionnelle, l'analyse de données, le machine learning et la visualisation pour transformer les données en insights actionnables. Les diplômés maîtrisent les technologies Big Data, les outils de BI et les méthodes d'analyse avancées pour accompagner la transformation digitale des organisations.
+      </>
+    ),
+  },
   {
     years: "2024–2025",
     degree: "Master 1 MIAGE",
     university: "Université de Rennes",
-    status: "En cours",
+    status: "Obtenu",
     location: "Rennes, France",
     link: { href: "https://formations.univ-rennes.fr/mention/master-mention-methodes-informatiques-appliquees-la-gestion-des-entreprises-miage", label: "Site de l'université" },
     description: (
