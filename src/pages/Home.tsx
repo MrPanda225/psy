@@ -17,7 +17,6 @@ export default class Home extends Component {
   };
 
   render(): React.ReactNode {
-    const { showContact } = this.state;
 
     return (
       <div className="home-container animate-page">
@@ -31,13 +30,11 @@ export default class Home extends Component {
           <div className="text-content reveal-up delay-1">
             <h1 className="reveal-up">{`Sahiré YAPI`}</h1>
             <p className="role reveal-up delay-2">
-              Etudiant en Master MIAGE, je suis curieux, avec un esprit d'équipe et organisé.
-              Passionné par le développement et les nouvelles technologies, je suis à la
-              recherche d'une alternance dans le domaine de l'IT.
+              Etudiant en Master 2 MIAGE spécialisé en Data & Business Intelligence, je suis curieux, avec un esprit d'équipe et organisé. Passionné par le développement et les nouvelles technologies, je recherche un stage de fin d'études dans le domaine de l'IT pour mettre en pratique mes compétences et contribuer à des projets innovants.
             </p>
             
             {/* Bouton télécharger CV */}
-            <a href="/assets/CV_Sahire_YAPI.pdf" 
+            <a href="/assets/CV-IA.pdf" 
                download="CV_Sahire_YAPI.pdf" 
                className="cv-download-btn reveal-up delay-3">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -54,10 +51,6 @@ export default class Home extends Component {
           <h2>Contact</h2>
           <p>Contactez-moi pour collaborer sur des projets innovants ou discuter de nouvelles opportunités dans le domaine de l'IT !</p>
 
-          <div className={`contact-info ${showContact ? 'show' : ''}`}>
-            {showContact === 'tel' && <p className="contact-text">+33 7 61 99 16 59</p>}
-            {showContact === 'email' && <p className="contact-text">sahire-guy-michel.yapi@etudiant.univ-rennes.fr</p>}
-          </div>
 
           <div className="icons">
             <a href="tel:+33761991659"
